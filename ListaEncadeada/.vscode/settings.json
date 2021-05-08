@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "listaencadeada.h": "c",
+        "stdlib.h": "c",
+        "math.h": "c"
+    }
+}
