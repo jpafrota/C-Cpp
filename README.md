@@ -1,2 +1,2 @@
 # C-Cpp
- códigos em C ou C++
+Códigos criados em C/C++
