@@ -124,7 +124,6 @@ node *insercaoOrdenada(node *lista, int chave){
 
 }
 
-//Deleta o nó especificado e retorna um ponteiro para o proximo nó
 node* deletaNo(node *head){
 
     node *aux = head;
@@ -134,7 +133,6 @@ node* deletaNo(node *head){
 
 }
 
-//Remove um elemento chave da lista recursivamente
 node* removeElemento(node* head, int chave){
     
     if(head == NULL) return NULL;
