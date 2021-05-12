@@ -10,3 +10,6 @@ struct NoArv{
 
 noArv234 *criaVazia();
 noArv234 *buscaArv();
+noArv234 *insere();
+int arvVazia();
+int ehFolha();
