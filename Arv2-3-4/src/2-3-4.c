@@ -24,20 +24,21 @@ noArv234 *buscaArv(noArv234 *raiz, int chave){
     
     int i;
     i = raiz->tamanho - 1;
-
     while( i >= 0 ){
 
         if( chave == raiz->dados[i] ) return raiz;
 
-        else if( chave > raiz->dados[i] ){
+        if( chave > raiz->dados[i] ){
             return buscaArv(raiz->filhos[i+1], chave);
         }
 
-        else if(i == 0) return buscaArv(raiz->filhos[i], chave);
+        if(i == 0) return buscaArv(raiz->filhos[i], chave);
 
         i--;
 
     }
+
+    return raiz;
 
 }
 
@@ -73,22 +74,44 @@ noArv234 *criaNo(int chave, noArv234 *pai){
 
 }
 
+/* void insereNo(noArv234 *raiz, noArv234 *filho){
+
+    for(int i = raiz->tamanho - 1; i >= 0; i--){
+        if(filho->dados[0] > raiz->dados[i]){
+            raiz->filhos[i+1] = filho;
+            return;
+        }
+
+        else if(filho->dados[0] < raiz->dados[i] && i == 0){
+
+        }
+    }
+
+}
+
 noArv234 *split(noArv234 *raiz){
 
-    //pai é NULL, cria novo no
-    if(raiz->pai == NULL) raiz->pai = criaNo(raiz->dados[1], raiz->pai);
+    // pai é NULL, cria novo no
+    if(raiz->pai == NULL){
+        raiz->pai = criaNo(raiz->dados[1], raiz->pai);
+    }
 
-    //pai nao e NULL, insere a chave nele.
-    else raiz->pai = insere(raiz->pai, raiz->dados[1]);
+    // pai nao e NULL, insere a chave nele.
+    else{
+        raiz->pai = insere(raiz->pai, raiz->dados[1]);
+    }
 
     // pai ja foi modificado, agora falta dividir o no
     // cria o irmao esquerdo
     noArv234 *novoEsq = criaNo(raiz->dados[0], raiz->pai);
 
-    //
+    //conectar o pai aos novos irmaos
+
+    insereNo(raiz->pai, novoEsq);
+    insereNo(raiz->pai, raiz);
     
 
-}
+} */
 
 noArv234 *insere(noArv234 *raiz, int chave){
 
@@ -106,7 +129,7 @@ noArv234 *insere(noArv234 *raiz, int chave){
 
     }
 
-    //se eh folha, insere
+    //se eh folha e nao ta cheio, insere
     if(ehFolha(raiz)){
 
         //arvore com pelo menos 1 no:
