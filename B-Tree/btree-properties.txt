@@ -1,0 +1,14 @@
+Uma árvore B de ordem M tem as seguintes propriedades:
+
+- todos os nós folha devem estar no mesmo nível
+- as chaves devem ser sempre mantidas ordenadas
+
+- cada nó tem no máximo M filhos
+- cada nó tem no máximo M-1 chaves
+
+- um nó raiz deve ter no mínimo 2 filhos
+- um nó interno pode ter no mínimo M/2 filhos
+- um nó folha pode ter 0 filhos
+
+- um nó raiz pode ter no mínimo 1 chave
+- um nó interno deve ter no mínimo (m/2)-1 chaves

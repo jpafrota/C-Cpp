@@ -4,6 +4,13 @@
 
 int main(){
 
-    printf("Hello World!s\n");
+    BTreeNode *raiz;
+    raiz = btree_create();
+
+
+
+    printf("\nHello World!\n\n");
+
+
 
 }
