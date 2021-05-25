@@ -18,4 +18,5 @@ int btree_isEmpty();
 BTreeNode *btree_create();
 BTreeNode *btree_newNode();
 BTreeNode *btree_print();
+BTreeNode *btree_search();
 BTreeNode *btree_insert();

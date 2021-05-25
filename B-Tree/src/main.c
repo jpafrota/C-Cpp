@@ -2,6 +2,8 @@
 #include "stdlib.h"
 #include "btree.h"
 
+
+
 int main(){
 
     BTreeNode *raiz;
@@ -9,8 +11,12 @@ int main(){
 
 
 
-    printf("\nHello World!\n\n");
+    printf("\n Clinica Psicologica UFAM! \n\n");
 
+    printf("Opcoes:\n\n");
+    printf("1 - Agendar sessao\n");
+    printf("2 - Registrar terapeuta\n");
+    printf("3 - ");
 
 
 }

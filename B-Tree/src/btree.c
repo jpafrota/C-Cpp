@@ -8,7 +8,7 @@ BTreeNode *btree_create(){
 
 }
 
-BTreeNode *buscaArv(BTreeNode *raiz, int chave){
+BTreeNode *btree_search(BTreeNode *raiz, int chave){
 
     if(raiz == NULL){
         printf("No nao existe na arvore!\n");
@@ -58,8 +58,30 @@ int btree_isLeaf(BTreeNode *raiz){
 
 }
 
+BTreeNode *btree_newNode(int chave){
+
+    BTreeNode *novo = malloc(sizeof(BTreeNode));
+    novo->chaves[0] = chave;
+
+    int i = 0;
+    while(i < M){
+        novo->filhos[i] = NULL;
+        i++;
+    }
+
+    novo->tamanho = 1;
+
+    return novo;
+
+}
+
 BTreeNode *btree_insert(BTreeNode *raiz, int chave){
 
+    if(btree_isEmpty(raiz)){
 
+        BTreeNode *novo = btree_newNode(chave);
+        return novo; 
+
+    }
 
 }
