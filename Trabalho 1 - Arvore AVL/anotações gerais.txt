@@ -1,0 +1,53 @@
+*corrigir bug das classes definindo um valor max para cada classe
+	max classe = x;
+	se vaga.num > max classe
+	vaga.num = (vaga mais proxima do piso disponivel)
+	realoca vaga.classe.
+
+1024 vagas no total
+128 vagas por piso
+1° PISO: 1 - 128
+2° PISO: 129 - 256
+3° PISO: 257 - 384
+4° PISO: 385 - 512
+5° PISO: 513 - 640
+6° PISO: 641 - 768
+7° PISO: 769 - 896
+8° PISO: 897 - 1024
+
+CLASSE A - 102 VAGAS - VIPS
+1 - 102
+
+CLASSE B - 204 VAGAS - MOTOS
+103 - 306
+
+CLASSE C - 204 VAGAS - GESTANTES
+307 - 510
+
+CLASSE D - 514 VAGAS - CARRO COMUM
+511 - 1024
+
+CLASSES:
+A - VIPS
+
+B - MOTOS
+
+C - GESTANTES, IDOSOS, DEFICIENTES, AUTISTAS
+
+D - CARRO
+
+OPCOES:
+
+1 - inserir cliente
+2 - remover cliente
+	* analise estatistica
+	* mostra quanto ele pagou e quanto tempo ficou
+	* remove o cliente
+3 - verificar vagas ocupadas
+	* imprime todas as vagas ocupadas
+	* mostra quantas vagas ha disponiveis
+4 - encerrar expediente
+	* mostra todos os dados estatisticos
+	* tempo medio de ocupacao de cada vaga.
+	* numero medio de vagas ocupadas
+	* horario de pico
